@@ -13,10 +13,13 @@
     
 
     
-        <meta name="description" content="环境：12CentOS 7Java 环境
+        <meta name="description" content="环境：1CentOS 7
 
-1、在网络上下载tomcat安装包（apache.fayea.com/tomcat）根据你的Java版本选择所对应的版本
-12# wget http://apache.fayea.com/tomcat/tomcat-8/v8.5.43/bin/// 这里下">
+1、使用yum源安装apache（httpd）服务器
+1# yum install httpd -y
+
+安装成功后会产生以下两个文件夹/etc/httpd/  # httpd配置文件夹/var/www/html/  # 网站的默认数据
+2、打开配置文件，根据个人需求更改参">
     
 
     <!--Author-->
@@ -26,15 +29,18 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="tomcat服务器的搭建">
+        <meta property="og:title" content="apache服务器的搭建">
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="环境：12CentOS 7Java 环境
+        <meta property="og:description" content="环境：1CentOS 7
 
-1、在网络上下载tomcat安装包（apache.fayea.com/tomcat）根据你的Java版本选择所对应的版本
-12# wget http://apache.fayea.com/tomcat/tomcat-8/v8.5.43/bin/// 这里下">
+1、使用yum源安装apache（httpd）服务器
+1# yum install httpd -y
+
+安装成功后会产生以下两个文件夹/etc/httpd/  # httpd配置文件夹/var/www/html/  # 网站的默认数据
+2、打开配置文件，根据个人需求更改参">
     
 
     <!--Open Graph Site Name-->
@@ -61,7 +67,7 @@
 
     <!-- Title -->
     
-    <title>tomcat服务器的搭建 - Zovida</title>
+    <title>apache服务器的搭建 - Zovida</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -171,13 +177,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>tomcat服务器的搭建</h1>
+                    <h1>apache服务器的搭建</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2019-08-04
+                            2019-08-05
                         
                     </span>
                 </div>
@@ -199,31 +205,27 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h3 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CentOS 7</span><br><span class="line">Java 环境</span><br></pre></td></tr></table></figure>
+                <h3 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CentOS 7</span><br></pre></td></tr></table></figure>
 
-<p>1、在网络上下载tomcat安装包（apache.fayea.com/tomcat）根据你的Java版本选择所对应的版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget http://apache.fayea.com/tomcat/tomcat-8/v8.5.43/bin/</span></span><br><span class="line">// 这里下载的是tomcat-8.5.43版本。</span><br></pre></td></tr></table></figure>
+<p>1、使用yum源安装apache（httpd）服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install httpd -y</span></span><br></pre></td></tr></table></figure>
 
-<p>2、在/usr/local内新建一个java文件夹，并下载之后将解压过的文件夹移动到其中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf apache-tomcat-8.5.43.tar.gz</span></span><br><span class="line"><span class="comment"># mkdir /usr/local/java</span></span><br><span class="line"><span class="comment"># cp apache-tomcat-8.5.43 /usr/local/java</span></span><br></pre></td></tr></table></figure>
+<p>安装成功后会产生以下两个文件夹<br>/etc/httpd/  # httpd配置文件夹<br>/var/www/html/  # 网站的默认数据</p>
+<p>2、打开配置文件，根据个人需求更改参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim /etc/httpd/conf/http.conf</span></span><br><span class="line"> 31 serverRoot <span class="string">"/etc/httpd"</span>           <span class="comment"># 存放配置文件的目录</span></span><br><span class="line"> 42 Listen 80           <span class="comment"># Apache服务监听端口</span></span><br><span class="line"> 66 User apache     <span class="comment"># 子进程的用户</span></span><br><span class="line"> 67 Group apache   <span class="comment"># 子进程的组</span></span><br><span class="line"> 86 ServerAdmin root@localhost  <span class="comment"># 设置管理员邮件地址</span></span><br><span class="line">119 DocumentRoot <span class="string">"/var/www/html"</span> --网站家目录</span><br><span class="line"><span class="comment"># 设置DocumentRoot指定目录的属性</span></span><br><span class="line">131 &lt;Directory <span class="string">"/var/www/html"</span>&gt;   <span class="comment"># 网站容器开始标识</span></span><br><span class="line">144 Options Indexes FollowSymLinks   <span class="comment"># 找不到主页时，以目录的方式呈现，并允许链接到网站根目录以外</span></span><br><span class="line">151 AllowOverride None                <span class="comment"># none不使用.htaccess控制,all允许</span></span><br><span class="line">156 Require all granted                 <span class="comment"># granted表示运行所有访问，denied表示拒绝所有访问</span></span><br><span class="line">157 &lt;/Directory&gt;    <span class="comment"># 容器结束</span></span><br><span class="line">164 DirectoryIndex index.html       <span class="comment"># 定义主页文件，当访问到网站目录时如果有定义的主页文件，网站会自动访问</span></span><br><span class="line">316 AddDefaultCharset UTF-8      <span class="comment"># 字符编码，如果中文的话，有可能需要改为gb2312或者gbk,因你的网站文件的默认编码而异</span></span><br></pre></td></tr></table></figure>
 
-<p>3、进入tomcat文件夹，再打开conf文件夹，vim server.xml 修改<connector port="8080" protocol="HTTP/1.1" connectiontimeout="20000" redirectport="8443">中的8080为80,保存退出</connector></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd /usr/local/java</span></span><br><span class="line"><span class="comment"># mv apache-tomcat-8.5.43 tomcat</span></span><br><span class="line"><span class="comment"># cd tomcat</span></span><br><span class="line"><span class="comment"># cd conf</span></span><br><span class="line"><span class="comment"># vim server.xml</span></span><br></pre></td></tr></table></figure>
+<p>3、启动apache服务器并将防火墙开启端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl start httpd</span></span><br><span class="line"><span class="comment"># firewall-cmd --zone=public --add-port=80/tcp --permanent</span></span><br><span class="line"><span class="comment"># firewall-cmd --reload</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://b2.bmp.ovh/imgs/2019/08/3a61b9feb5f95d7c.png" alt></p>
-<p>4、进入tomcat文件夹，再打开bin文件夹，输入./startup.sh启动tomcat服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd /usr/local/java/tomcat/bin</span></span><br><span class="line"><span class="comment"># ./startup.sh</span></span><br></pre></td></tr></table></figure>
+<p>查看端口的开放情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ss -antlp</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://b2.bmp.ovh/imgs/2019/08/e58947c102fc86e0.png" alt></p>
-<p>5、启动防火墙（systemctl start firewalld）将80端口添加到防火墙firewall-cmd –zone=public –add-port=8080/tcp –-permanent，重启防火墙，firewall-cmd –reload</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl start firewalld</span></span><br><span class="line"><span class="comment"># firewall-cmd --zone=public --add-port=8080/tcp –-permanent</span></span><br><span class="line"><span class="comment"># firewall-cmd –-reload</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/4d15ef593d1f7db0.png" alt></p>
+<p>4、设置apache服务器开机启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemcl enable httpd</span></span><br></pre></td></tr></table></figure>
 
-<p>6、打开浏览器，输入127.0.0.1进入tomcat服务器</p>
-<p>7、进入conf文件夹打开用户配置文件。vim tomcat-user.xml，在倒数第二行输入以下代码，设置用户信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;user username=<span class="string">"admin"</span> password=<span class="string">"admin"</span> roles=<span class="string">"manager-gui"</span>/&gt;</span><br><span class="line">//（admin可根据个人情况改）</span><br></pre></td></tr></table></figure>
+<p>5、在浏览器输入<a href="http://www.localhost.com:80" target="_blank" rel="noopener">http://www.localhost.com:80</a> 即可访问apache服务器的主页</p>
 
-<p>8、进入bin文件夹，输入./shutdown.sh可关闭tomcat服务。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd /usr/local/java/tomcat/bin</span></span><br><span class="line"><span class="comment"># ./shutdown.sh</span></span><br></pre></td></tr></table></figure>
 
                 
             </div>
