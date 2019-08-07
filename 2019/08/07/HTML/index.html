@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="功能：账号/密码登录，账号的格式为手机号或邮箱，当手机号或邮箱的格式错误时会弹窗提示错误；密码位数必须大于六位，当输入密码小于六位时会弹窗提示密码长度必须大于六位；验证码可通过单击图片进行刷新。
+源码：1234567891011121314151617181920212223242526272829">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="rtzovida">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="利用HTML+CSS做出一个登陆界面">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="功能：账号/密码登录，账号的格式为手机号或邮箱，当手机号或邮箱的格式错误时会弹窗提示错误；密码位数必须大于六位，当输入密码小于六位时会弹窗提示密码长度必须大于六位；验证码可通过单击图片进行刷新。
+源码：1234567891011121314151617181920212223242526272829">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Zovida">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttps://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttps://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png">
+    
+
+    <!-- Title -->
+    
+    <title>利用HTML+CSS做出一个登陆界面 - Zovida</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('https://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>利用HTML+CSS做出一个登陆界面</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-08-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><p>账号/密码登录，账号的格式为手机号或邮箱，当手机号或邮箱的格式错误时会弹窗提示错误；密码位数必须大于六位，当输入密码小于六位时会弹窗提示密码长度必须大于六位；验证码可通过单击图片进行刷新。</p>
+<h3 id="源码："><a href="#源码：" class="headerlink" title="源码："></a>源码：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;登陆界面&lt;/title&gt;</span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"css/login.css"</span>&gt;</span><br><span class="line">    &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">        a&#123;text-decoration: none;&#125;</span><br><span class="line">        a:link&#123;color:<span class="comment">#0066FF&#125;</span></span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">       <span class="keyword">function</span> <span class="function"><span class="title">checkInputNum</span></span>() &#123;</span><br><span class="line">        var phoneNumReg = /(^[0-9]&#123;3,4&#125;\-[0-9]&#123;7&#125;$)|(^[0-9]&#123;7&#125;$)|(^[0-9]&#123;3,4&#125;[0-9]&#123;7&#125;$)|(^0&#123;0,1&#125;13[0-9]&#123;9&#125;$)/</span><br><span class="line">        var checkmail = /[a-zA-Z0-9]&#123;1,10&#125;@[a-zA-Z0-9]&#123;1,5&#125;\.[a-zA-Z0-9]&#123;1,5&#125;/</span><br><span class="line">        <span class="keyword">if</span>(!phoneNumReg.test(document.forma.phoneNum.value) &amp;&amp; !checkmail.test(document.forma.phoneNum.value)) &#123;</span><br><span class="line">        alert(<span class="string">'请填写正确电话号码/邮箱!!'</span>);</span><br><span class="line">        document.forma.phoneNum.focus();</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="function"><span class="title">checkInputPass</span></span>()&#123;</span><br><span class="line">            var pass = document.getElementById(<span class="string">"password"</span>);</span><br><span class="line">            <span class="keyword">if</span> (password.value.length &lt; 6) &#123;</span><br><span class="line">                alert(<span class="string">"密码长度必须大于六位！"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> Change(node)&#123;</span><br><span class="line">            node.src=<span class="string">"https://i.mgtv.com/vcode?from=pcclient&amp;time="</span>+new Date();</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;div class=<span class="string">"box"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"top"</span>&gt;</span><br><span class="line">            &lt;h2&gt;&lt;b&gt;登录&lt;/b&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;form action=<span class="string">"http://httpbin.org/post"</span> name=<span class="string">"forma"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">            &lt;img  class=<span class="string">"logo"</span> src=<span class="string">"https://b2.bmp.ovh/imgs/2019/07/b1fc2959d08c698b.png"</span>&gt;</span><br><span class="line">            &lt;br&gt;</span><br><span class="line"></span><br><span class="line">          &lt;!--   要加上对手机号或邮箱的验证功能 --&gt;</span><br><span class="line">            &lt;input <span class="built_in">type</span>=<span class="string">"text"</span>  name=<span class="string">"phoneNum"</span>  placeholder=<span class="string">"手机号/邮箱"</span> onchange=<span class="string">"return checkInputNum()"</span>&gt;</span><br><span class="line">            &lt;br&gt;</span><br><span class="line">            &lt;!-- 要加上对密码位数的提示 --&gt;</span><br><span class="line">            &lt;input <span class="built_in">type</span>=<span class="string">"password"</span> name=<span class="string">"password"</span> id=<span class="string">"password"</span> placeholder=<span class="string">"密码"</span> onchange=<span class="string">"checkInputPass()"</span>&gt;</span><br><span class="line">            &lt;br&gt;</span><br><span class="line">            &lt;input   class=<span class="string">"input_code"</span> <span class="built_in">type</span>=<span class="string">"text"</span> name=<span class="string">"verifycode"</span> placeholder=<span class="string">"验证码"</span>&gt;</span><br><span class="line">           &lt;!--  要加上点击图片就可以更新的功能 --&gt;</span><br><span class="line"></span><br><span class="line">            &lt;img class=<span class="string">"verifycode"</span> src=<span class="string">"https://i.mgtv.com/vcode?from=pcclient&amp;time=1564575352682"</span> alt=<span class="string">"看不清，切换图片"</span> onclick=<span class="string">"Change(this)"</span>&gt; </span><br><span class="line">            &lt;br&gt;</span><br><span class="line">            &lt;a  class=<span class="string">"getpass"</span> href=<span class="string">"submit"</span>&gt;忘记密码&lt;/a&gt;</span><br><span class="line">            &lt;br&gt;</span><br><span class="line">            &lt;input  class=<span class="string">"login"</span> <span class="built_in">type</span>=<span class="string">"submit"</span> name=<span class="string">"submit"</span> value=<span class="string">"登录"</span>&gt;</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line"></span><br><span class="line">        &lt;/form&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/a139c7fdfea69f45.png" alt></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2019 rtzovida<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
