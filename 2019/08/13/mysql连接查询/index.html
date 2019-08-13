@@ -13,6 +13,9 @@
     
 
     
+        <meta name="description" content="1.使用order by,判断当前数据表中字段数  
+12SELECT * FROM `mysql`.`user` WHERE `user` = &#39;root&#39; order by 49;     //显示内容SELECT * FROM `mysql`.`user` WHERE `user` = &#39;ro">
+    
 
     <!--Author-->
     
@@ -21,10 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Zovida">
+        <meta property="og:title" content="mysql联合查询">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="1.使用order by,判断当前数据表中字段数  
+12SELECT * FROM `mysql`.`user` WHERE `user` = &#39;root&#39; order by 49;     //显示内容SELECT * FROM `mysql`.`user` WHERE `user` = &#39;ro">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Zovida</title>
+    <title>mysql联合查询 - Zovida</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,168 +159,79 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('https://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>mysql联合查询</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-08-13
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/08/13/mysql连接查询/">
-        <h1 class="post-title archive">
-            mysql联合查询
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-13
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>1.使用order by,判断当前数据表中字段数  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM `mysql`.`user` WHERE `user` = <span class="string">'root'</span> order by 49;     //显示内容</span><br><span class="line">SELECT * FROM `mysql`.`user` WHERE `user` = <span class="string">'root'</span> order by 50;    //不显示内容，说明字段数为49</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/7a8b3917f0fb7fa8.png" alt></p>
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/e6a8df7c2e1e0943.png" alt></p>
+<p>2.联合查询 数据库的名称</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM `mysql`.`user` WHERE `user` = <span class="string">'root'</span> and 1=2 union select (select group_concat(distinct table_schema) from information_schema.columns),1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// and 1=2 让前面查询语句查询为假，不显示</span><br><span class="line">//distinct 去重</span><br><span class="line">//group_concat 将数据显示到一行</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/1d3008eef5987871.png" alt></p>
+<p>3.联合查询 test 库中 数据表 名称</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM `mysql`.`user` WHERE `user` = <span class="string">'root'</span> and 1=2 union select (select group_concat(distinct table_name) from information_schema.columns <span class="built_in">where</span> table_schema =<span class="string">'test'</span>),2,3,4,5,6,7,8,9,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/783c2c925e36a214.png" alt></p>
+<p>4.联合查询 test.users 中的 字段名称</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM `mysql`.`user` WHERE `user` = <span class="string">'root'</span> and 1=2 union select (select group_concat(distinct column_name) from information_schema.columns <span class="built_in">where</span> table_schema =<span class="string">'test'</span> and table_name=<span class="string">'users'</span>),2,3,4,5,6,7,8,9,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/2612dbc33834df07.png" alt></p>
+<p>5.查询 test.users 中的 username passwd 内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM `mysql`.`user` WHERE `user` = <span class="string">'root'</span> and 1=2 union select (select group_concat(username,<span class="string">'-'</span>,passwd) from test.users),2,3,4,5,6,7,8,9,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/8c80ef26d9e8bda8.png" alt></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/08/12/mysql命令行查询导入的sql文件/">
-        <h1 class="post-title archive">
-            在cmd命令里查询导入的数据库文件信息
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-12
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/08/12/新闻界面的搭建/">
-        <h1 class="post-title archive">
-            新闻界面的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/08/reg+login界面设计/">
-        <h1 class="post-title archive">
-            注册登录界面+新闻添加及展示界面
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/HTML/">
-        <h1 class="post-title archive">
-            利用HTML+CSS做出一个登陆界面
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/news/">
-        <h1 class="post-title archive">
-            利用php粗略地搭建新闻展示页面
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/for循环遍历关联数组/">
-        <h1 class="post-title archive">
-            for循环遍历关联数组
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/五角星/">
-        <h1 class="post-title archive">
-            利用php输出一个五角星
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/五角星数/">
-        <h1 class="post-title archive">
-            五角星数的查询
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/查询素数/">
-        <h1 class="post-title archive">
-            输入一个数，查询该数是否为素数
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
