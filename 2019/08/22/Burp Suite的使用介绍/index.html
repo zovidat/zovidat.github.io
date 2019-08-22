@@ -13,6 +13,9 @@
     
 
     
+        <meta name="description" content="1、Burp Suite的安装
+首先搭建Java运行环境，由于Burp Suite在Java11.0.1版本运行时存在有一定的bug，所以最好使用1.8版本的Java；下载好的Burp无需安装，利用burp-loader-keygen.jar打开burp suite pro即可。    （需要的软件">
+    
 
     <!--Author-->
     
@@ -21,10 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Zovida">
+        <meta property="og:title" content="Burp Suite的使用介绍">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="1、Burp Suite的安装
+首先搭建Java运行环境，由于Burp Suite在Java11.0.1版本运行时存在有一定的bug，所以最好使用1.8版本的Java；下载好的Burp无需安装，利用burp-loader-keygen.jar打开burp suite pro即可。    （需要的软件">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Zovida</title>
+    <title>Burp Suite的使用介绍 - Zovida</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,168 +159,71 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('https://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>Burp Suite的使用介绍</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-08-22
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/08/22/Burp Suite的使用介绍/">
-        <h1 class="post-title archive">
-            Burp Suite的使用介绍
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-22
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>1、Burp Suite的安装</p>
+<p>首先搭建Java运行环境，由于Burp Suite在Java11.0.1版本运行时存在有一定的bug，所以最好使用1.8版本的Java；下载好的Burp无需安装，利用burp-loader-keygen.jar打开burp suite pro即可。<br>    （需要的软件都可以在网上找到）</p>
+<p>2、Burp Suite的设置</p>
+<p>打开Burp后，单击Proxy，再点击Options，查看到软件默认的本地代理端口为8080</p>
+<pre><code>以firefox为例，设置浏览器代理，打开浏览器后点击右上角的“打开菜单”，随后点击“选项”--“常规”--“网络设置”--“设置”--“手动代理设置”，填入网址和端口，即可完成设置。</code></pre><p><img src="https://b2.bmp.ovh/imgs/2019/08/2165bc86a69f58b9.png" alt></p>
+<p><img src="https://b2.bmp.ovh/imgs/2019/08/edc784d7bd99d499.png" alt></p>
+<p>3、Burp Suite的应用</p>
+<p>主要功能是对浏览器通过的流量进行拦截和抓包，然后对其中的数据进行分析，Burp Proxy选项下为拦截到的信息，Forward可以将拦截的流量释放，Drop则是对其进行丢弃，Intercept is on 表示拦截开启，Action选项表示对拦截到的数据进行下一步的操作和分析</p>
+<pre><code>Dashboard可以对Web系统的各种漏洞进行检测，有主动扫描和被动扫描；
+Intruder是可以对拦截的网站信息进行爆破的工具；
+Repeater是可以手动修改部分HTTP请求，并分析它们响应的工具；
+Extender是拓展模块，可以添加Burp Suite的插件；
+。。。</code></pre><p><img src="https://b2.bmp.ovh/imgs/2019/08/4f207162a1c35d81.png" alt></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/08/20/HTTP基础/">
-        <h1 class="post-title archive">
-            HTTP协议基础
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-20
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/08/13/mysql连接查询/">
-        <h1 class="post-title archive">
-            mysql联合查询
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/12/mysql命令行查询导入的sql文件/">
-        <h1 class="post-title archive">
-            在cmd命令里查询导入的数据库文件信息
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/12/新闻界面的搭建/">
-        <h1 class="post-title archive">
-            新闻界面的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/08/reg+login界面设计/">
-        <h1 class="post-title archive">
-            注册登录界面+新闻添加及展示界面
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/HTML/">
-        <h1 class="post-title archive">
-            利用HTML+CSS做出一个登陆界面
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/news/">
-        <h1 class="post-title archive">
-            利用php粗略地搭建新闻展示页面
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/for循环遍历关联数组/">
-        <h1 class="post-title archive">
-            for循环遍历关联数组
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/07/五角星/">
-        <h1 class="post-title archive">
-            利用php输出一个五角星
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-07
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
